@@ -1,0 +1,26 @@
+<h1 style="color: red;position: relative;left: 400px;"> <strong>Display Data From a Server</strong></h1>
+<hr>
+<form>
+    <div *ngFor="let user of users;let i=index">
+        <fieldset>
+            <legend style="color: hotpink;">User Details:{{i+1}}</legend>
+        <label>Name</label>
+        <input type="text" name="name" value={{user.name}} readonly/><br/>
+        <label>UserName</label>
+        <input type="text" name="username" value={{user.username}} readonly/><br/>  
+        <label>Email</label>
+        <input type="text" name="email" value={{user.email}} readonly/><br/>
+        <Address>Address:</Address>
+        <input type="text" name="address" value={{user.address.street}},{{user.address.suite}},{{user.address.city}},{{user.address.zipcode}}/><br/>
+        <br/><label>Geo:</label>
+        <input type="text" name="geo" value={{user.address.geo.lat}},{{user.address.geo.lng}}/>
+        <br/><label>Phone No:</label>
+        <input type="text" name="phone" value={{user.phone}} readonly/>
+        <br/><label>Website :</label>
+        <input type="text" name="website" value={{user.website}} readonly/>
+        <br/><label>Company Name:</label>
+        <input type="text" name="company" value={{user.company.name}},{{user.company.catchPhrase}},{{user.company.bs}}/> 
+        </fieldset>
+    </div>
+</form>
+<hr>
