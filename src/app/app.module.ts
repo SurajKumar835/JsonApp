@@ -9,7 +9,7 @@ import { UserService } from './user.service';
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
     BrowserModule,
